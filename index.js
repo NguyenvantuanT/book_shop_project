@@ -7,6 +7,7 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const authorRoute = require("./routers/author");
 const bookRoute = require("./routers/book");
+const categoryRoute = require("./routers/category");
 
 
 dotenv.config();
@@ -22,7 +23,7 @@ app.use(morgan("common"));
 //ROUTE
 app.use("/v1/author" , authorRoute);
 app.use("/v1/book" , bookRoute);
-
+app.use("/v1/category" , categoryRoute);
 
 app.listen(8081 , () => {
     console.log("Server is running...");

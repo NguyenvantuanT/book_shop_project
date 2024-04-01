@@ -15,10 +15,15 @@ const bookSchema = new mongoose.Schema({
         type: [String]
     },
 
+    discription: {
+        type: String,
+    },
+
     author: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Author"
-    }
+    },
+
 });
 
 let Book = mongoose.model("Book" , bookSchema);
